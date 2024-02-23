@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <title>Immobiliare</title>
+</head>
+<body>
+  <header class="header">
+    <a href="#home" class="header__logo">
+      <img
+        src="./logo.jpg"
+        class="header__img"
+        alt="logo"
+      >
+    </a>
+  
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="#blog" class="nav__link">Blog</a>
+        </li>
+  
+        <li class="nav__item">
+          <a href="#contacts" class="nav__link">Contatti</a>
+        </li>
+  
+        <li class="nav__item">
+          <a href="#faq" class="nav__link">FAQ</a>
+        </li>
+  
+        <li class="nav__item">
+          <a href="#about" class="nav__link">Chi siamo</a>
+        </li>
+      </ul>
+    </nav>
+  
+    <form class="search-form">
+      <input type="text" placeholder="Ricerca" class="search-input">
+      <button type="submit" class="search-button button">Ricerca</button>
+    </form>
+  </header>
+  
+  <section class="main__first-section">
+    <p class="first-section__title">
+      Scopri la casa dei tuoi sogni: dove inizia ogni momento
+    </p>
+  </section>
+
+  <main class="main"> 
+    <div class="container">
+  
+      <section class="advantages section">
+        <h2 class="advantages__title section-title section-title--align-left">
+          I nostri vantaggi
+        </h2>
+      
+        <div class="advantages__content">
+          <div class="advantages__item">
+            <div class="advantages__left-part">
+              <h3 class="advantages__subtitle">Agenti esperti</h3>
+              <p class="advantages__description">Il nostro team è composto da agenti esperti e competenti che ti guideranno attraverso ogni fase.</p>
+            </div>
+
+            <div class="advantages__image-container">
+              <img src="advantage1.jpg" alt="Vantaggio 1" class="advantages__image">
+            </div>
+          </div>
+      
+          <div class="advantages__item">
+            <div class="advantages__left-part">
+              <h3 class="advantages__subtitle">Ampio elenco</h3>
+              <p class="advantages__description">Accedi a un'ampia gamma di annunci tra cui case residenziali, proprietà commerciali e terreni liberi.</p>
+            </div>
+
+            <div class="advantages__image-container">
+              <img src="advantage2.png" alt="Vantaggio 2" class="advantages__image">
+            </div>
+          </div>
+      
+          <div class="advantages__item">
+            <div class="advantages__left-part">
+              <h3 class="advantages__subtitle">Servizio personalizzato</h3>
+              <p class="advantages__description">Ricevi attenzione personalizzata e soluzioni su misura per soddisfare le tue esigenze specifiche.</p>
+            </div>
+
+            <div class="advantages__image-container">
+              <img src="advantage3.jpg" alt="Vantaggio 3" class="advantages__image">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts-form section" id="contacts-form">
+        <h2 class="section-title">Scrivici</h2>
+      
+        <div class="contacts__wrapper">
+          <form
+            onsubmit="handleSubmit(event)"
+            class="contacts__form"
+          >
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="contacts__input"
+              placeholder="Nome"
+              required
+            >
+
+            
+            <input
+            type="email"
+            name="email"
+            id="email"
+            class="contacts__input"
+            placeholder="Email"
+            required
+            >
+            
+            <div class="phone-container">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                class="contacts__input telephone"
+                placeholder="Numero di telefono"
+                required
+              >
+            </div>
+
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              class="contacts__input--message"
+              placeholder="Messaggio"
+              required
+            ></textarea>
+            
+            <input
+              type="submit"
+              value="Invia"
+              class="contacts__button button"
+            >
+          </form>
+        </div>
+      </section>
+      
+      <section class="contacts-info section" id="contacts-info">
+        <h2 class="section-title">Contatti</h2>
+      
+        <div class="contacts__wrapper">
+          <article class="contacts__info">
+            <p class="contacts__name">Telefono</p>
+            <a href="tel:+1 234 5555-55-55" class="contacts__details">+1 234 5555-55-55</a>
+      
+            <p class="contacts__name">Email</p>
+            <p class="contacts__details">realestate@gmail.com</p>
+      
+            <p class="contacts__name">Indirizzo</p>
+            <a href="https://goo.gl/maps/TKNAQVFXPUJJPrdt5" target="_blank" class="contacts__details">
+              400 first ave.
+              <br>
+              suite 700
+              <br>
+              Minneapolis, MN 55401
+            </a>
+          </article>
+        </div>
+      </section>
+      
+
+      <section class="map section">
+        <h2 class="section-title">Trovaci</h2>
+        <div class="map__wrapper">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15232.540337509188!2d12.49636622103812!3d41.90278328603159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f619bf1bb783d%3A0x69e5c499fc026d2a!2sRome%2C%20Metropolitan%20City%20of%20Rome%2C%20Italy!5e0!3m2!1sen!2suk!4v1646369356970!5m2!1sen!2suk"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__content container">
+      <a href="#home" class="footer__logo">
+        <img
+          src="./logo.jpg"
+          class="footer__img"
+          alt="logo"
+        >
+      </a>
+  
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#politica-sulla-riservatezza" class="nav__link">politica sulla riservatezza</a>
+          </li>
+  
+          <li class="nav__item">
+            <a href="#termini-uso" class="nav__link">Termini d'uso</a>
+          </li>
+  
+          <li class="nav__item">
+            <a href="#contatti" class="nav__link">Contatti</a>
+          </li>
+        </ul>
+      </nav>
+  
+      <p class="footer__phone">Telefono: +39 123 456789</p>
+      
+      <p class="footer__rights">© Tutti i diritti riservati</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
